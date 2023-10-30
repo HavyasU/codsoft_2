@@ -1,0 +1,106 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body 
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-body 
+{
+    width:30rem;
+    height: 40rem;
+    background-color: rgb(4, 81, 87);
+    border-radius: 20px;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    & input#todo-input 
+    {
+        width: 20rem;
+        border-radius: 7px;
+        font-weight: 700;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 10px 15px;
+        margin: 2rem;
+        font-size: 20px;
+    }
+    & .btn 
+    {
+        width: 9rem;
+        min-height: 3rem;
+        border-radius: 7px;
+        background-color: azure;
+        font-size: 20px;
+        font-weight: 700;
+        box-shadow: 0 0 10px rgb(61, 59, 59);
+        transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        cursor: pointer;
+        &:hover 
+        {
+            background-color: aqua;
+            border: 2px solid rgb(255, 255, 255);
+            box-shadow: 0 0 20px cyan;
+        }
+    }
+    & .display-todo 
+    {
+        margin-top: 3rem;
+        list-style: none;
+        & .todo-list 
+        {
+            background-color: rgb(29, 225, 225);
+            width: 24rem;
+            max-height:4rem;
+            margin: 8px 0;
+            border-radius: 5px;
+            padding: 10px 10px;
+            color: black;
+            font-weight: 600;
+            display:flex;
+            /* justify-content: center; */
+            align-items: center;
+            position: relative;
+            &::-webkit-scrollbar
+            {
+                display: none;
+            }
+        
+        & .todo-list-item
+        {
+            width: 90%;
+            max-height:4rem;
+            margin: 8px 0;
+            border-radius: 5px;
+            padding: 10px 10px;
+            overflow: scroll;
+            color: black;
+            font-weight: 600;
+            
+            &::-webkit-scrollbar
+            {
+                display: none;
+            }
+        }
+        & .fa-trash 
+            {
+                position: absolute;
+                top: 50%;
+                right: 3.5%;
+                transform: translate(-5%,-50%);
+                cursor: pointer;
+
+            }
+        }
+    }
+}
